@@ -5,16 +5,7 @@ check::check() {
 }
 
 void check::setItemList(vector<itemCheck> itemList) {
-	cout << "\aaaaa\n";
-	for (int i = 0; i < itemList.size(); i++) {
-		cout << "   " << itemList.size() << itemList.at(i).getName() << "   " << itemList.at(i).getCount() << "   " << itemList.at(i).getBarcode() << "   " << itemList.at(i).getPrice() << endl;
-	}
-	this->itemList = itemList;
-	cout << "\nfffff\n";
-	for (int i = 0; i < this->itemList.size(); i++) {
-		cout << "   " << this->itemList.size() << this->itemList.at(i).getName() << "   " << this->itemList.at(i).getCount() << "   " << this->itemList.at(i).getBarcode() << "   " << this->itemList.at(i).getPrice() << endl;
-	}
-	cout << "\dddddd\n";
+	this->itemList = itemList; 
 }
 
 void check::addItem(itemCheck item) {
@@ -28,14 +19,12 @@ void check::addItem(itemCheck item) {
 				itemList.erase(iter + i);
 			}
 			else {
-				cout << "\n--------\nÂ ÷åêå íå ìîæåò áûòü îòðèöàòåëüíîå êîëè÷åñòâî òîâàðà, äîáàâëåíèå îòìåíåíî\n--------\n";
+				cout << "\n--------\nÃ‚ Ã·Ã¥ÃªÃ¥ Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã² Ã¡Ã»Ã²Ã¼ Ã®Ã²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã®Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã²Ã®Ã¢Ã Ã°Ã , Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã®Ã²Ã¬Ã¥Ã­Ã¥Ã­Ã®\n--------\n";
 			}
-			cout << "\nADSFASF\n";
 			calcSum();
 			return;
 		}
 	}
-	cout << "\n-----ADSFASF-------\n";
 	itemList.push_back(item);
 	calcSum();
 }
@@ -70,18 +59,18 @@ void check::setBack(int back) {
 
 void check::showItem_List() {
 	for (int i = 0; i < itemList.size(); i++) {
-		cout <<"\nÒîâàð #" << i + 1;
-		cout << " - Íàçâàíèå: " << itemList.at(i).getName() << endl;
-		cout << "Íîìåð øòðèõ-êîäà: " << itemList.at(i).getBarcode() << endl;
-		cout << "Öåíà çà åä. òîâàðà: " << itemList.at(i).getPrice() << endl;
-		cout << "Êîëè÷åñòâî åä. òîâàðà: " << itemList.at(i).getCount() << endl;
+		cout <<"\nÃ’Ã®Ã¢Ã Ã° #" << i + 1;
+		cout << " - ÃÃ Ã§Ã¢Ã Ã­Ã¨Ã¥: " << itemList.at(i).getName() << endl;
+		cout << "ÃÃ®Ã¬Ã¥Ã° Ã¸Ã²Ã°Ã¨Ãµ-ÃªÃ®Ã¤Ã : " << itemList.at(i).getBarcode() << endl;
+		cout << "Ã–Ã¥Ã­Ã  Ã§Ã  Ã¥Ã¤. Ã²Ã®Ã¢Ã Ã°Ã : " << itemList.at(i).getPrice() << endl;
+		cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¥Ã¤. Ã²Ã®Ã¢Ã Ã°Ã : " << itemList.at(i).getCount() << endl;
 	}
 	calcSum();
-	cout << "Îáùàÿ ñóììà ÷åêà: " << sum << endl;
+	cout << "ÃŽÃ¡Ã¹Ã Ã¿ Ã±Ã³Ã¬Ã¬Ã  Ã·Ã¥ÃªÃ : " << sum << endl;
 	if (card) {
-		cout << "×åê áûë îïëà÷åí êàðòîé" << endl;
+		cout << "Ã—Ã¥Ãª Ã¡Ã»Ã« Ã®Ã¯Ã«Ã Ã·Ã¥Ã­ ÃªÃ Ã°Ã²Ã®Ã©" << endl;
 	}
 	else {
-		cout << "×åê áûë îïëà÷åí íàëè÷íûìè, ñóììà ñäà÷è: " << back << endl;
+		cout << "Ã—Ã¥Ãª Ã¡Ã»Ã« Ã®Ã¯Ã«Ã Ã·Ã¥Ã­ Ã­Ã Ã«Ã¨Ã·Ã­Ã»Ã¬Ã¨, Ã±Ã³Ã¬Ã¬Ã  Ã±Ã¤Ã Ã·Ã¨: " << back << endl;
 	}
 }
