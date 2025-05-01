@@ -19,7 +19,7 @@ void check::addItem(itemCheck item) {
 				itemList.erase(iter + i);
 			}
 			else {
-				cout << "\n--------\nÂ ÷åêå íå ìîæåò áûòü îòðèöàòåëüíîå êîëè÷åñòâî òîâàðà, äîáàâëåíèå îòìåíåíî\n--------\n";
+				cout << "\n--------\количество товара не может быть отрицательным\n--------\n";
 			}
 			calcSum();
 			return;
@@ -59,18 +59,18 @@ void check::setBack(int back) {
 
 void check::showItem_List() {
 	for (int i = 0; i < itemList.size(); i++) {
-		cout <<"\nÒîâàð #" << i + 1;
-		cout << " - Íàçâàíèå: " << itemList.at(i).getName() << endl;
-		cout << "Íîìåð øòðèõ-êîäà: " << itemList.at(i).getBarcode() << endl;
-		cout << "Öåíà çà åä. òîâàðà: " << itemList.at(i).getPrice() << endl;
-		cout << "Êîëè÷åñòâî åä. òîâàðà: " << itemList.at(i).getCount() << endl;
+		cout <<"\nтовар #" << i + 1;
+		cout << " - Наименование: " << itemList.at(i).getName() << endl;
+		cout << "Штрих-код: " << itemList.at(i).getBarcode() << endl;
+		cout << "Цена за ед. товара: " << itemList.at(i).getPrice() << endl;
+		cout << "Количество ед. товара: " << itemList.at(i).getCount() << endl;
 	}
 	calcSum();
-	cout << "Îáùàÿ ñóììà ÷åêà: " << sum << endl;
+	cout << "Итого: " << sum << endl;
 	if (card) {
-		cout << "×åê áûë îïëà÷åí êàðòîé" << endl;
+		cout << "Чек был оплачен картой" << endl;
 	}
 	else {
-		cout << "×åê áûë îïëà÷åí íàëè÷íûìè, ñóììà ñäà÷è: " << back << endl;
+		cout << "Чек был оплачен наличными, сумма сдачи:" << back << endl;
 	}
 }
