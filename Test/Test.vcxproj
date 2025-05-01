@@ -128,13 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="check.cpp" />
-    <ClCompile Include="item.cpp" />
+    <ClCompile Include="itemCheck.cpp" />
+    <ClCompile Include="items.cpp" />
+    <ClCompile Include="money.cpp" />
     <ClCompile Include="smena.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="check.h" />
-    <ClInclude Include="item.h" />
+    <ClInclude Include="itemCheck.h" />
+    <ClInclude Include="items.h" />
+    <ClInclude Include="money.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="smena.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
