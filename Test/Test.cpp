@@ -185,7 +185,6 @@ int main()
                             cin >> i3;
                             itemCheck tem(tempItem.getName(), tempItem.getBarcode(), tempItem.getPrice(), i3);
                             tempCheck.addItem(tem);
-                            tempCheck.showItem_List();
                         }
                         else if (i2 == 2) {
                             string name;
@@ -204,7 +203,6 @@ int main()
                             cin >> i3;
                             itemCheck tem(tempItem.getName(), tempItem.getBarcode(), tempItem.getPrice(), i3);
                             tempCheck.addItem(tem);
-                            tempCheck.showItem_List();
                         }
                         else if (i2 == 3) {
                             cout << "Обшая сумма чека: " << tempCheck.getSum();
