@@ -24,7 +24,13 @@
     <ClCompile Include="check.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="item.cpp">
+    <ClCompile Include="items.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="money.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="itemCheck.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +41,16 @@
     <ClInclude Include="check.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="item.h">
+    <ClInclude Include="items.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="money.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="itemCheck.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
